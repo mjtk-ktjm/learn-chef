@@ -25,13 +25,18 @@ end
 
 mysql_connection_info = {
   host: '127.0.0.1',
-  socket: '/var/run/mysqld/mysqld.sock',
+  socket: '/run/mysql-default/mysqld.sock',
   username: 'root',
   password: node['lamp']['database']['passwords_root_password']
 }
 
 # Create the database instance.
 mysql_database node['lamp']['database']['dbname'] do
+  connection mysql_connection_info
+  action :create
+end
+
+mysql_database node['lamp']['database']['dbname_new'] do
   connection mysql_connection_info
   action :create
 end
