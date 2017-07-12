@@ -14,7 +14,7 @@ end
 
 # Configure the MySQL service.
 mysql_service 'default' do
-  initial_root_password 'lazy'
+  initial_root_password 'lazyb'
   action [:create, :start]
 end
 
@@ -27,7 +27,7 @@ mysql_connection_info = {
   host: '127.0.0.1',
   socket: '/run/mysql-default/mysqld.sock',
   username: 'root',
-  password: 'lazy' 
+  password: 'lazyb' 
 }
 
 # Create the database instance.
