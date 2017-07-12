@@ -6,7 +6,8 @@
 
 # Load MySQL passwords from the 'passwords' data bag.
 # # passwords = data_bag_item('passwords', 'mysql')
-passwords = {'root_password': "#r00t", 'admin_password': "Adm1nPassw0rd"}
+passwords['root_password'] = "#r00t"
+passwords['admin_password'] = "Adm1nPassw0rd"
 # Configure the MySQL client.
 mysql_client 'default' do
   action :create
