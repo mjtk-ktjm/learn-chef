@@ -32,7 +32,7 @@ default['mariadb']['mysqld']['service_name'] = if node['platform'] == 'centos'
                                                  'mysql'
                                                end
 default['mariadb']['mysqld']['user']                    = 'mysql'
-default['mariadb']['mysqld']['port']                    = '3306'
+default['mariadb']['mysqld']['port']                    = '3307'
 default['mariadb']['mysqld']['basedir']                 = '/usr'
 default['mariadb']['mysqld']['default_datadir']         = '/var/lib/mysql'
 # if different from previous value, datadir will be moved after install
