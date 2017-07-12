@@ -27,8 +27,7 @@ mysql_connection_info = {
   host: '127.0.0.1',
   socket: '/run/mysql-default/mysqld.sock',
   username: 'root',
-  password: 'lazy'
-  #password: node['lamp']['database']['passwords_root_password']
+  password: node['lamp']['database']['passwords_root_password']
 }
 
 # Create the database instance.
