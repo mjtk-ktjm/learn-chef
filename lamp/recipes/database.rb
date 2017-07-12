@@ -25,8 +25,9 @@ end
 
 mysql_connection_info = {
   host: '127.0.0.1',
+  socket: '/var/run/mysqld/mysqld.sock',
   username: 'root',
-  password: 'test'
+  password: passwords['root_password']
 }
 
 # Create the database instance.
