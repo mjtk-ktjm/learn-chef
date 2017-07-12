@@ -14,7 +14,7 @@ end
 
 # Configure the MySQL service.
 mysql_service 'default' do
-  initial_root_password node['lamp']['database']['dbname']['passwords_root_password']
+  initial_root_password node['lamp']['database']['passwords_root_password']
   action [:create, :start]
 end
 
@@ -27,7 +27,7 @@ mysql_connection_info = {
   host: '127.0.0.1',
   socket: '/var/run/mysqld/mysqld.sock',
   username: 'root',
-  password: node['lamp']['database']['dbname']['passwords_root_password']
+  password: node['lamp']['database']['passwords_root_password']
 }
 
 # Create the database instance.
@@ -39,7 +39,7 @@ end
 # Add a database user.
 mysql_database_user node['lamp']['database']['admin_username'] do
   connection mysql_connection_info
-  password node['lamp']['database']['dbname']['passwords_admin_password']
+  password node['lamp']['database']['passwords_admin_password']
   database_name node['lamp']['database']['dbname']
   host '127.0.0.1'
   action [:create, :grant]
