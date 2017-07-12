@@ -14,7 +14,7 @@ end
 
 # Configure the MySQL service.
 mysql_service 'default' do
-  initial_root_password 'lazy'
+  initial_root_password 'lazyb'
   action [:create, :start]
 end
 
